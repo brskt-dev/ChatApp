@@ -1,0 +1,9 @@
+<div class="chat-container">
+  <h2>Chat Multi-Usuário</h2>
+  <div class="messages">
+    <p *ngFor="let msg of messages">{{ msg }}</p>
+  </div>
+  <input [(ngModel)]="message" placeholder="Digite uma mensagem..." />
+  <button (click)="sendMessage()">Enviar</button>
+</div>
+

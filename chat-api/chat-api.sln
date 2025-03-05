@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chat-api", "chat-api.csproj", "{8ED34148-907F-4F7C-A65B-3FE44BF26B12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66DD2932-B630-4F29-840C-DA8F003D8C07}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ED34148-907F-4F7C-A65B-3FE44BF26B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED34148-907F-4F7C-A65B-3FE44BF26B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED34148-907F-4F7C-A65B-3FE44BF26B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED34148-907F-4F7C-A65B-3FE44BF26B12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

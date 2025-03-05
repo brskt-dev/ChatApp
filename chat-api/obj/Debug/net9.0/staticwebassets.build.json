@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "eErpDipfTaBa2bjW+ekm0EDaUmeuQZE3qYBSzpcH2Cc=",
+  "Source": "chat-api",
+  "BasePath": "_content/chat-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
