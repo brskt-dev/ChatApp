@@ -1,0 +1,76 @@
+version: '3.9'
+
+networks:
+  chat_network:
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: chat_postgres
+    restart: always
+    networks:
+      - chat_network
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: chatdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+  api:
+    build: .
+    container_name: chat_api
+    restart: always
+    depends_on:
+      - postgres
+      - redis
+      - centrifugo
+    networks:
+      - chat_network
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=chatdb;Username=user;Password=password
+
+  redis:
+    image: redis:latest
+    container_name: chat_redis
+    restart: always
+    networks:
+      - chat_network
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    depends_on:
+      - postgres
+
+  centrifugo:
+    image: centrifugo/centrifugo
+    container_name: chat_centrifugo
+    restart: always
+    networks:
+      - chat_network
+    volumes:
+      - ./centrifugo/config.json:/centrifugo/config.json
+    command: centrifugo --config=/centrifugo/config.json
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  adminer:
+    image: adminer
+    container_name: chat_adminer
+    restart: always
+    networks:
+      - chat_network
+    depends_on:
+      - postgres
+    ports:
+      - "8081:8080"
+
+volumes:
+  postgres_data:
