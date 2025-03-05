@@ -4,11 +4,14 @@ chat-frontend/dist
 chat-frontend/.angular/cache
 chat-frontend/.angular/cache/19.2.0/chat-frontend/.tsbuildinfo
 
+chat-api/bin/
+chat-api/obj/
+chat-api/out/
+chat-api/.cache/
+
 chat-api/.idea/
 chat-api/*.sln.iml
 chat-api/*.csproj.iml
-chat-api/out/
-chat-api/.cache/
 chat-api/*.DotSettings.user
 chat-api/*.sln.DotSettings
 chat-api/.idea_modules/
@@ -20,3 +23,9 @@ chat-api/.idea/uiDesigner.xml
 chat-api/.idea/vcs.xml
 chat-api/.idea/modules.xml
 chat-api/.idea/.gitignore
+
+chat-api/*.log
+chat-api/logs/
+chat-api/*.swp
+chat-api/*.swo
+chat-api/*.bak

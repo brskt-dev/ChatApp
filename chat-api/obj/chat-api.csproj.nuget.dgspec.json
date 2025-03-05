@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\ChatApp\\chat-api\\chat-api.csproj": {}
+    "C:\\Users\\bruno\\Documentos\\Dev Projects\\ChatApp\\chat-api\\chat-api.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\ChatApp\\chat-api\\chat-api.csproj": {
+    "C:\\Users\\bruno\\Documentos\\Dev Projects\\ChatApp\\chat-api\\chat-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ChatApp\\chat-api\\chat-api.csproj",
+        "projectUniqueName": "C:\\Users\\bruno\\Documentos\\Dev Projects\\ChatApp\\chat-api\\chat-api.csproj",
         "projectName": "chat-api",
-        "projectPath": "C:\\Projects\\ChatApp\\chat-api\\chat-api.csproj",
-        "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ChatApp\\chat-api\\obj\\",
+        "projectPath": "C:\\Users\\bruno\\Documentos\\Dev Projects\\ChatApp\\chat-api\\chat-api.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bruno\\Documentos\\Dev Projects\\ChatApp\\chat-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
