@@ -38,6 +38,8 @@ builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 
 var app = builder.Build();
 
+builder.Services.AddCors();
+
 // 🔹 Habilitar CORS (caso necessário para permitir conexão do frontend)
 app.UseCors(policy =>
     policy.AllowAnyHeader()
