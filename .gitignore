@@ -1,1 +1,3 @@
+.vscode/*
 chat-frontend/node_modules
+chat-frontend//dist
