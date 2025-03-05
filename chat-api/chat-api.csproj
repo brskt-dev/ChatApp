@@ -13,12 +13,14 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
         <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.2.0" />
         <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="9.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="9.0.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
           <PrivateAssets>all</PrivateAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.2" />
+        <PackageReference Include="NBomber" Version="5.8.2" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.3" />
         <PackageReference Include="StackExchange.Redis" Version="2.8.24" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
@@ -27,6 +29,7 @@
     <ItemGroup>
       <Folder Include="Application\" />
       <Folder Include="Shared\" />
+      <Folder Include="SignalRBenchmark\reports\2025-03-05_20.35.33_session_b4a358e1\" />
     </ItemGroup>
 
 </Project>

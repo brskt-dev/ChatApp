@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="9.0.2" />
+      <PackageReference Include="NBomber" Version="5.8.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="reports\2025-03-05_20.35.33_session_b4a358e1\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="reports\2025-03-05_20.16.74_session_6e593088\nbomber_report_2025-03-05--20-17-35.txt" />
+      <None Remove="reports\2025-03-05_20.16.74_session_6e593088\nbomber_report_2025-03-05--20-17-35.html" />
+      <None Remove="reports\2025-03-05_20.16.74_session_6e593088\nbomber_report_2025-03-05--20-17-35.csv" />
+    </ItemGroup>
+
+</Project>

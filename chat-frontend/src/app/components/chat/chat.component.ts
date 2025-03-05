@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class ChatComponent implements OnInit {
   messages: string[] = [];
   message = '';
-  username = 'Usuário' + Math.floor(Math.random() * 1000);
+  username = '';
 
   constructor(private chatService: ChatService) {}
 

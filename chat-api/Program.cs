@@ -2,8 +2,6 @@ using chat_api.Infrastructure.Persistence;
 using chat_api.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using chat_api.Presentation.Hubs;
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +11,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ChatDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 🔹 Configuração do Redis
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetSection("Redis:ConnectionString").Value;
@@ -23,7 +20,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 builder.Services.AddSignalR();
 
 // 🔹 Injeção de Dependência dos Repositórios
-builder.Services.AddScoped<MessageRepository, MessageRepository>();
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 
 builder.Services.AddControllers();
 
@@ -33,8 +30,6 @@ builder.WebHost.UseUrls("http://0.0.0.0:5000");
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 
 var app = builder.Build();
 

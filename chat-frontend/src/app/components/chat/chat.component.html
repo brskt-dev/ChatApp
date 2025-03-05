@@ -3,6 +3,7 @@
   <div class="messages">
     <p *ngFor="let msg of messages">{{ msg }}</p>
   </div>
+  <input [(ngModel)]="username" placeholder="Digite seu usuário..." />
   <input [(ngModel)]="message" placeholder="Digite uma mensagem..." />
   <button (click)="sendMessage()">Enviar</button>
 </div>

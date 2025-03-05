@@ -25,16 +25,26 @@ public class ChatHub : Hub
         }
 
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+
+        // Se o usuário não existir, cria um novo e salva no banco
         if (user == null)
         {
-            throw new HubException("Usuário não encontrado.");
+            user = new User
+            {
+                Username = username,
+                Email = $"{username}@example.com" // Pode ser ajustado conforme necessário
+            };
+
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync(); // Salva para gerar o ID corretamente
         }
 
+        // Agora o user.Id sempre estará preenchido corretamente
         var message = new Message
         {
             Content = messageContent,
             Timestamp = DateTime.UtcNow,
-            UserId = user.Id // Agora garantimos que UserId está preenchido corretamente
+            UserId = user.Id, // Agora garantimos que o UserId está correto
         };
 
         await _messageRepository.AddAsync(message);
